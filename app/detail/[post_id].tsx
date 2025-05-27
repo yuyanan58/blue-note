@@ -1,10 +1,14 @@
 import { View, Text } from 'react-native';
 import React from 'react';
+import { useLocalSearchParams } from 'expo-router';
 
-export default function Detail() {
+const Detail = () => {
+  const { post_id } = useLocalSearchParams();
   return (
     <View>
-      <Text>[post_id]</Text>
+      <Text>Detail of {post_id}</Text>
     </View>
   );
-}
+};
+
+export default Detail;
