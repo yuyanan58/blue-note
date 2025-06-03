@@ -1,3 +1,4 @@
+import '@/lib/appwrite';
 import {
   DarkTheme,
   DefaultTheme,
@@ -7,6 +8,8 @@ import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
+import Toast from 'react-native-toast-message';
+import 'react-native-url-polyfill/auto';
 import './global.css';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
@@ -37,6 +40,7 @@ export default function RootLayout() {
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
+      <Toast />
     </ThemeProvider>
   );
 }
